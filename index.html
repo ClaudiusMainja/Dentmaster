@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dentmasters - Professional Auto Body Repairs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+<link rel="stylesheet" href="/main.css">
+</head>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot hidden md:block"></div>
+    <div class="cursor-outline hidden md:block"></div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar"></div>
+
+<header>
+        <nav class="bg-gradient-to-tr from-gray-800 to-blue-800 shadow-lg fixed w-full top-0 z-50 py-6 montserrat">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <!-- Logo -->
+                    <div class="flex-shrink-0">
+                        <a href="/index.html" class="flex items-center space-x-2">
+                            <!-- Logo SVG -->
+                            <svg class="h-8 w-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                      d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                            <span class="text-white text-xl figtree-medium">DentMasters</span>
+                        </a>
+                    </div>
+    
+                    <!-- Mobile Menu Toggle -->
+                    <input type="checkbox" id="nav-toggle" class="hidden">
+                    <label for="nav-toggle" class="toggle-label block md:hidden cursor-pointer p-2">
+                        <div class="space-y-2 bg-orange-600 px-4 py-4">
+                            <span class="hamburger-line block w-6 h-0.5 bg-white"></span>
+                            <span class="hamburger-line block w-6 h-0.5 bg-white"></span>
+                            <span class="hamburger-line block w-4 h-0.5 bg-white"></span>
+                        </div>
+                    </label>
+    
+                    <!-- Navigation Links -->
+                    <div class="nav-links absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto 
+                                bg-blue-800 md:bg-transparent">
+                        <div class="md:flex md:items-center md:space-x-8 px-4 pb-4 md:p-0">
+                            <a href="/index.html" class="nav-item text-white hover:text-blue-200 transition-colors duration-200 
+                                             block md:inline-block py-2 px-4 md:p-0">
+                                Home
+                            </a>
+                            <a href="/pages/about.html" class="nav-item text-white hover:text-blue-200 transition-colors duration-200 
+                                             block md:inline-block py-2 px-4 md:p-0">
+                                About Us
+                            </a>
+                            <a href="/pages/services.html" class="nav-item text-white hover:text-blue-200 transition-colors duration-200 
+                                             block md:inline-block py-2 px-4 md:p-0">
+                                What We Do
+                            </a>
+                            <a href="/pages/contact.html" class="nav-item text-white hover:text-blue-200 transition-colors duration-200 
+                                             block md:inline-block py-2 px-4 md:p-0">
+                                Contact Us
+                            </a>
+                            <a href="/pages/quote.html" target="_blank">
+                            <button class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-medium 
+                                         transform hover:scale-105 transition-all duration-200 shadow-lg w-full md:w-auto 
+                                         mt-2 md:mt-0 flex items-center justify-center">
+                                <span>Get a Quote</span>
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                          d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    
+        <!-- Spacer for fixed navbar -->
+        <div class="h-16"></div>
+</header>
+
+
+    <Script>
+     // Check system theme preference
+     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        
+        // Initialize particles
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS('particles-js', {
+                particles: {
+                    number: { value: 80 },
+                    color: { value: '#ffffff' },
+                    shape: { type: 'circle' },
+                    opacity: {
+                        value: 0.1,
+                        random: false
+                    },
+                    size: {
+                        value: 3,
+                        random: true
+                    },
+                    move: {
+                        enable: true,
+                        speed: 4,
+                        direction: 'none',
+                        random: false,
+                        straight: false,
+                        outModes: { default: 'bounce' }
+                    }
+                }
+            });
+        });
+    </Script>
+
+<body class=" bg-white dark:bg-indigo-500 montserrat text-2xl">
+    <!-- Hero Section -->
+    <section class="relative min-h-screen overflow-hidden">
+        <!-- Background with gradient overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="/assets/images/hero.jpg" alt="Auto repair shop" class="object-cover w-full h-full"/>
+            <div class="absolute inset-0 bg-gradient-to-r from-red-900/80 via-blue-900/70 to-white/30 dark:from-red-950/90 dark:via-blue-950/80 dark:to-gray-900/40 "></div>
+        </div>
+
+        <!-- Particles effect -->
+        <div id="particles-js" class="absolute inset-0 z-10 "></div>
+
+        <!-- Content container -->
+        <div class="relative z-20 container mx-auto px-4 py-20 min-h-screen flex items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Text content -->
+                <div class="text-white dark:text-gray-100">
+                    <h1 class="text-5xl sm:text-center md:text-6xl md:text-left lg:text-7xl dm-serif-text-regular mb-6">
+                        Restoring Vehicles, Redefining Excellence
+                    </h1>
+                    <p class="text-lg md:text-2xl mb-8 text-gray-100 dark:text-gray-200 figtree-medium">
+                        It's time to transform your damaged vehicle back to its former glory with DentMasters. 
+                        We specialize in comprehensive auto body repairs for both accident-damaged 
+                        and non-runner vehicles, serving Harare and the whole of Zimbabwe with excellence.
+                    </p>
+                    <a href="/pages/quote.html" target="_blank">
+                    <div class="flex flex-wrap gap-4">
+                        <button class="bg-red-600 hover:bg-red-700 dark:bg-red-700 dark:hover:bg-slate-200 dark:hover:text-gray-600 text-white px-12 py-6 rounded-lg transition duration-300 shadow-lg">
+                            Get a Quote
+                        </button>
+                    </a>
+
+                       <a href="/pages/services.html"> <button class="bg-blue-600 dark:bg-transparent dark:border-2 border-slate-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800 text-white px-12 py-6 rounded-lg transition duration-300 shadow-lg">
+                           What We Do
+                        </button>
+                    </a>
+                    </div>
+                </div>
+
+                <!-- Image/illustration -->
+                <div class="hidden lg:block">
+                    <img src="/assets/images/hero image 1.png" alt="hero image" class="rounded-lg shadow-2xl container"/>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    
+    
+    <!-- Services Section -->
+    <section class="py-20 px-4  text-indigo-500  montserrat text-xl">
+        <div class="container mx-auto max-w-7xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl dm-serif-text-regular  mb-4 text-red-600 dark:text-white">Our Professional Services</h2>
+                <p class="text-2xl text-indigo-500 dark:text-slate-200">Covers a comprehensive auto care solutions for your vehicle</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Panel Beating Card -->
+                <div class="service-card rounded-xl overflow-hidden shadow-lg">
+                    <div class="service-image-container h-48">
+                        <img src="/assets/images/pannel beating.png" alt="Panel Beating Service" class="service-image w-full h-full object-cover"/>
+                    </div>
+                    <div class="service-content p-6">
+                        <h3 class="text-2xl montserrat-medium text-red-500 uppercase dark:text-white mb-3">Panel Beating</h3>
+                        <p class="text-indigo-600 hover:text-white dark:text-gray-300 mb-4">Professional panel beating services to restore your vehicle's appearance and structural integrity.</p>
+                        <a href="/pages/services.html" target="_blank">
+                            <div class="learn-more-btn inline-block px-6 py-4 bg-red-500 text-white rounded-lg text-lg  cursor-pointer">
+                            Learn More →
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Spray Painting Card -->
+                <div class="service-card rounded-xl overflow-hidden shadow-lg">
+                    <div class="service-image-container h-48">
+                        <img src="/assets/images/spray painting.png" alt="Spray Painting Service" class="service-image w-full h-full object-cover"/>
+                    </div>
+                    <div class="service-content p-6">
+                        <h3 class="text-2xl montserrat-medium text-red-500 uppercase dark:text-white mb-3">Spray Painting</h3>
+                        <p class="text-indigo-600 hover:text-white  dark:text-gray-300 mb-4">Expert color matching and premium quality paint finish for all vehicle types.</p>
+                        <a href="/pages/services.html" target="_blank">
+                            <div class="learn-more-btn inline-block px-6 py-4 bg-red-500 text-white rounded-lg text-lg  cursor-pointer">
+                            Learn More →
+                            </div>
+                    </a>
+                    </div>
+                </div>
+
+                <!-- Chassis Straightening Card -->
+                <div class="service-card rounded-xl overflow-hidden shadow-lg">
+                    <div class="service-image-container h-48">
+                        <img src="/assets/images/windscreen repair.png" alt="Windscreen Repair Service" class="service-image w-full h-full object-cover"/>
+                    </div>
+                    <div class="service-content p-6">
+                        <h3 class="text-2xl montserrat-medium text-red-500 uppercase dark:text-white hover:text-white mb-3">Windscreen Repairs</h3>
+                        <p class="text-indigo-600 hover:text-white  dark:text-gray-300 mb-4">Guaranteed fitting and removal of windscreens, meeting SANS standards.</p>
+                        <a href="/pages/services.html" target="_blank">
+                            <div class="learn-more-btn inline-block px-6 py-4 bg-red-500 text-white rounded-lg text-lg  cursor-pointer">
+                            Learn More →
+                            </div>
+                    </a>
+                    </div>
+                </div>
+
+                <!-- Chassis Straightening Card -->
+                <div class="service-card rounded-xl overflow-hidden shadow-lg ">
+                    <div class="service-image-container h-48">
+                        <img src="/assets/images/chasis.png" alt="Chassis Straightening Service" class="service-image w-full h-full object-cover"/>
+                    </div>
+                    <div class="service-content p-6">
+                        <h3 class="text-2xl montserrat-medium text-red-500 uppercase dark:text-white hover:text-white mb-3">Chassis Straightening</h3>
+                        <p class="text-indigo-600 hover:text-white  dark:text-gray-300 mb-4">Precision alignment and straightening services for optimal vehicle performance.</p>
+                        <a href="/pages/services.html" target="_blank">
+                            <div class="learn-more-btn inline-block px-6 py-4 bg-red-500 text-white rounded-lg text-lg  cursor-pointer">
+                            Learn More →
+                            </div>
+                    </a>
+                    </div>
+                </div>                
+            
+                <!-- Chassis Straightening Card -->
+                <div class="service-card rounded-xl overflow-hidden shadow-lg ">
+                    <div class="service-image-container h-48">
+                        <img src="/assets/images/towing.png" alt="Vehicle Towing Service" class="service-image w-full h-full object-cover"/>
+                    </div>
+                    <div class="service-content p-6">
+                        <h3 class="text-2xl montserrat-medium text-red-500 uppercase dark:text-white hover:text-white mb-3">24-Hour Towing</h3>
+                        <p class="text-indigo-600 hover:text-white  dark:text-gray-300 mb-4">Enjoy free 24-hour towing within 20 km for our valued customers.</p>
+                        <a href="/pages/services.html" target="_blank">
+                            <div class="learn-more-btn inline-block px-6 py-4 bg-red-500 text-white rounded-lg text-lg  cursor-pointer">
+                            Learn More →
+                            </div>
+                    </a>
+                    </div>
+                </div>  
+
+                 <!-- Chassis Straightening Card -->
+                 <div class="service-card rounded-xl overflow-hidden shadow-lg ">
+                    <div class="service-image-container h-48">
+                        <img src="/assets/images/accessory fixing.png" alt="Accessories Fitting Service" class="service-image w-full h-full object-cover"/>
+                    </div>
+                    <div class="service-content p-6">
+                        <h3 class="text-2xl montserrat-medium text-red-500 uppercase dark:text-white hover:text-white mb-3">Accessory Fitting</h3>
+                        <p class="text-indigo-600 hover:text-white  dark:text-gray-300 mb-4"> Upgrade your vehicle with a range of stylish and secure accessories, professionally fitted.</p>
+                        <a href="/pages/services.html" target="_blank">
+                            <div class="learn-more-btn inline-block px-6 py-4 bg-red-500 text-white rounded-lg text-lg  cursor-pointer">
+                            Learn More →
+                            </div>
+                    </a>
+                    </div>
+                </div>                 
+
+            </div>
+
+            <!-- CTA Section -->
+            <div class="text-center mt-16">
+                <a href="/pages/quote.html"target="_blank"   class="inline-block px-8 py-4 text-lg  text-white rounded-lg bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                    Get Your Free Quote
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <!-- CTA Section -->
+    <div class="bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-800 dark:to-blue-900 transform skew-y-3">
+        <div class="max-w-7xl mx-auto px-4 py-16 transform -skew-y-3">
+            <div class="text-center slide-in">
+                <h2 class="text-3xl font-bold text-white mb-4">Ready to Transform Your Vehicle?</h2>
+                <p class="text-blue-100 mb-8">Get a free quote today and experience our professional service.</p>
+                <button class="bg-white text-blue-600 px-8 py-3 rounded-full hover:bg-gray-100 transition duration-300 transform hover:scale-105 hover:shadow-lg">
+                    Request Free Quote
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="slide-in">
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">DentMasters</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Professional auto body repairs in Harare.</p>
+                </div>
+                <div class="slide-in">
+                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors duration-300">Home</a></li>
+                        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors duration-300">About</a></li>
+                        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors duration-300">Services</a></li>
+                        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="slide-in">
+                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors duration-300">Panel Beating</a></li>
+                        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors duration-300">Spray Painting</a></li>
+                        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors duration-300">Auto Trimming</a></li>
+                        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors duration-300">Vehicle Towing</a></li>
+                    </ul>
+                </div>
+                <div class="slide-in">
+                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors duration-300 cursor-pointer">Harare, Zimbabwe</li>
+                        <li class="text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors duration-300 cursor-pointer">info@dentmasters.co.zw</li>
+                        <li class="text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors duration-300 cursor-pointer">+263 123 456 789</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-600 dark:text-gray-300">&copy; 2024 DentMasters. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize GSAP
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Custom cursor
+        document.addEventListener('mousemove', (e) => {
+            const cursorDot = document.querySelector('.cursor-dot');
+            const cursorOutline = document.querySelector('.cursor-outline');
+            
+            if (cursorDot && cursorOutline) {
+                cursorDot.style.left = e.clientX + 'px';
+                cursorDot.style.top = e.clientY + 'px';
+                
+                cursorOutline.style.left = e.clientX + 'px';
+                cursorOutline.style.top = e.clientY + 'px';
+            }
+        });
+
+        // Hover effect for clickable elements
+        document.querySelectorAll('a, button').forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                const cursorOutline = document.querySelector('.cursor-outline');
+                if (cursorOutline) {
+                    cursorOutline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                    cursorOutline.style.borderColor = '#2563eb';
+                }
+            });
+
+            element.addEventListener('mouseleave', () => {
+                const cursorOutline = document.querySelector('.cursor-outline');
+                if (cursorOutline) {
+                    cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
+                    cursorOutline.style.borderColor = '#2563eb';
+                }
+            });
+        });
+
+        // Scroll progress bar
+        window.addEventListener('scroll', () => {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.scrollY / windowHeight) * 100;
+            document.querySelector('.progress-bar').style.width = scrolled + '%';
+        });
+
+        // Before/After slider functionality
+        const slider = document.querySelector('.before-after-slider');
+        const sliderImageAfter = document.querySelector('.slider-image-after');
+        const sliderHandle = document.querySelector('.slider-handle');
+
+        let isResizing = false;
+
+        const resizeImages = (e) => {
+            if (!isResizing) return;
+            
+            const slider = e.currentTarget;
+            const rect = slider.getBoundingClientRect();
+            const x = Math.max(0, Math.min(e.clientX - rect.left, rect.width));
+            const percent = (x / rect.width) * 100;
+            
+            sliderHandle.style.left = `${percent}%`;
+            sliderImageAfter.style.clipPath = `polygon(0 0, ${percent}% 0, ${percent}% 100%, 0 100%)`;
+        };
+
+        slider.addEventListener('mousedown', () => isResizing = true);
+        window.addEventListener('mousemove', resizeImages);
+        window.addEventListener('mouseup', () => isResizing = false);
+
+        // Scroll animations
+        const slideInElements = document.querySelectorAll('.slide-in');
+        
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        slideInElements.forEach(element => {
+            observer.observe(element);
+        });
+
+        // Navbar scroll effect
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('nav');
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll <= 0) {
+                navbar.classList.remove('shadow-lg');
+                return;
+            }
+
+            if (currentScroll > lastScroll) {
+                navbar.style.transform = 'translateY(-100%)';
+            } else {
+                navbar.style.transform = 'translateY(0)';
+                navbar.classList.add('shadow-lg');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Dark mode toggle based on system preference
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+
+        // Initialize GSAP animations
+        gsap.from(".animate-float", {
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out"
+        });
+
+        gsap.from(".service-card", {
+            scrollTrigger: {
+                trigger: ".service-card",
+                start: "top center+=100",
+                toggleActions: "play none none reverse"
+            },
+            y: 60,
+            opacity: 0,
+            duration: 0.6,
+            stagger: 0.2
+        });
+
+
+      // Theme Toggle
+      const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark');
+            body.classList.toggle('light');
+        });
+
+        // GSAP Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Stagger animate service cards
+        gsap.utils.toArray('.service-card').forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top bottom-=100",
+                    toggleActions: "play none none reverse"
+                },
+                opacity: 0,
+                y: 50,
+                duration: 0.8,
+                delay: i * 0.2,
+                ease: "power3.out"
+            });
+        });
+
+        // Animate section heading
+        gsap.from('.text-5xl', {
+            scrollTrigger: {
+                trigger: '.text-5xl',
+                start: "top bottom-=100",
+                toggleActions: "play none none reverse"
+            },
+            opacity: 0,
+            y: -30,
+            duration: 1,
+            ease: "power3.out"
+        });
+    </script>
+</body>
+</html>
