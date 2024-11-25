@@ -93,34 +93,61 @@
 
 <body class=" bg-white dark:bg-indigo-800 montserrat text-2xl dark:text-white text-indigo-600 theme-light">
 
-  <nav class="bg-gradient-to-r from-blue-700 to-blue-900 px-6 py-4">
-    <div class="container mx-auto flex justify-between items-center">
-        <a href="/" class="text-white text-3xl font-['DM_Serif_Display']">DentMasters</a>
-        <div class="flex items-center gap-6">
-            <button id="themeToggle" class="p-2 rounded-full hover:bg-blue-800 text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                </svg>
-            </button>
-            <button class="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-6 py-2 rounded-full transition-all duration-300 text-lg font-medium">
-                Get a Quote
-            </button>
-        </div>
-    </div>
-</nav>
+          <!-- Hero Section -->
+          <section class="bg-brand-gradient relative min-h-screen overflow-hidden">
+            <!-- Background with gradient overlay -->
+   <div class="absolute inset-0 z-0">
+       <img src="/assets/images/our-services/our work.png" alt="Auto repair shop" class="object-cover w-full h-full"/>
+       <div class="absolute inset-0 bg-gradient-to-r from-red-900/80 via-blue-900/70 to-white/30 dark:from-red-950/90 dark:via-blue-950/80 dark:to-gray-900/40 "></div>
+   </div>
 
-<header class="bg-gradient-to-r from-blue-800 to-blue-600 py-20 text-white">
+   <div class="relative z-20 container mx-auto px-4 py-20 min-h-screen flex items-center text-center ">
+       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+           <!-- Text content -->
+           <div class="text-white dark:text-gray-100">
+               <h1 class="text-6xl md:text-6xl md:text-left lg:text-7xl  dm-serif-text-regular mb-6 slide-in">
+            What We Do
+               </h1>
+               <p class="text-lg md:text-2xl mb-8 text-gray-100 dark:text-gray-200 montserrat text-left">
+                as your trusted partner in Harare for comprehensive auto body repairs and restoration. From minor dents to major collision repairs, we bring your vehicle back to its original glory
+               </p>
+               <a href="/pages/quote.html" target="_blank">
+               <div class="flex flex-wrap gap-4">
+                   <button class="bg-red-600 hover:bg-red-700 dark:bg-red-700 dark:hover:bg-slate-200 dark:hover:text-gray-600 text-white px-12 py-6 rounded-lg transition duration-300 shadow-lg">
+                       Get a Quote
+                   </button>
+               </a>
+
+                  <a href="/pages/about.html"> <button class="bg-blue-600 dark:bg-transparent dark:border-2 border-slate-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800 text-white px-12 py-6 rounded-lg transition duration-300 shadow-lg">
+                   Know More About Us
+                   </button>
+               </a>
+               </div>
+           </div>
+
+           <!-- Image/illustration -->
+           <div class="hidden lg:block">
+               <img src="/assets/images/Our Team.png" alt="Who We Are" class="rounded-lg shadow-2xl container"/>
+           </div>
+       </div>
+   </div>
+
+</section>
+
+<!--Hero Section-->
+<section class="bg-gradient-to-r from-blue-800 to-blue-600 py-20 text-white h-1/2">
+  
     <div class="container mx-auto px-6">
-        <h1 class="text-5xl font-bold mb-6">Expert Auto Body Services</h1>
-        <p class="text-xl max-w-2xl">Your trusted partner in Harare for comprehensive auto body repairs and restoration. From minor dents to major collision repairs, we bring your vehicle back to its original glory.</p>
+        <h1 class="text-5xl  mb-6">Why We Stand Out!</h1>
+        <p class="text-xl max-w-4xl">At Dent Masters, we deliver reliable, high-quality auto body repairs tailored to your needs. From panel beating to spray painting, our expert team ensures fast, affordable, and eco-friendly solutions, restoring your vehicle's look and performance with precision and care.</p>
     </div>
-</header>
+</section>
 
 <main class="container mx-auto px-6 py-16">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Panel Beating -->
         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <img src="/api/placeholder/400/300" alt="Panel Beating Service" class="w-full h-48 object-cover">
+            <img src="/assets/images/our-services/Panel Beating.png" alt="Panel Beating Service" class="w-full h-48 object-cover">
             <div class="p-6">
                 <h3 class="text-2xl font-bold text-blue-800 mb-4">Panel Beating</h3>
                 <p class="text-gray-700 mb-6">Professional panel beating services using state-of-the-art equipment and techniques. We handle:</p>
@@ -130,13 +157,15 @@
                     <li>• Frame straightening</li>
                     <li>• Metal reshaping and reformation</li>
                 </ul>
+                <a href="/pages/quote.html">
                 <button class="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white py-3 rounded-full">Request Service</button>
+              </a>
             </div>
         </div>
 
         <!-- Spray Painting -->
         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <img src="/api/placeholder/400/300" alt="Spray Painting Service" class="w-full h-48 object-cover">
+            <img src="/assets/images/our-services/spray painting.png" alt="Spray Painting Service" class="w-full h-48 object-cover">
             <div class="p-6">
                 <h3 class="text-2xl font-bold text-blue-800 mb-4">Spray Painting</h3>
                 <p class="text-gray-700 mb-6">Expert color matching and premium finishing with our advanced spray painting services:</p>
@@ -146,13 +175,15 @@
                     <li>• Custom paint jobs</li>
                     <li>• Metallic and pearl finish options</li>
                 </ul>
+                <a href="/pages/quote.html">
                 <button class="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white py-3 rounded-full">Request Service</button>
+              </a>
             </div>
         </div>
 
         <!-- Chassis Straightening -->
         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <img src="/api/placeholder/400/300" alt="Chassis Straightening" class="w-full h-48 object-cover">
+            <img src="/assets/images/our-services/chasis.png" alt="Chassis Straightening" class="w-full h-48 object-cover">
             <div class="p-6">
                 <h3 class="text-2xl font-bold text-blue-800 mb-4">Chassis Straightening</h3>
                 <p class="text-gray-700 mb-6">Precision chassis alignment and structural repair services:</p>
@@ -162,13 +193,15 @@
                     <li>• Structural reinforcement</li>
                     <li>• Post-accident restoration</li>
                 </ul>
+                <a href="/pages/quote.html">
                 <button class="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white py-3 rounded-full">Request Service</button>
+              </a>
             </div>
         </div>
 
         <!-- Auto Trimming & Upholstery -->
         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <img src="/api/placeholder/400/300" alt="Auto Trimming" class="w-full h-48 object-cover">
+            <img src="/assets/images/our-services/auto triming.png" alt="Auto Trimming" class="w-full h-48 object-cover">
             <div class="p-6">
                 <h3 class="text-2xl font-bold text-blue-800 mb-4">Auto Trimming & Upholstery</h3>
                 <p class="text-gray-700 mb-6">Complete interior restoration and customization services:</p>
@@ -178,13 +211,15 @@
                     <li>• Custom interior modifications</li>
                     <li>• Leather treatment and repair</li>
                 </ul>
+                <a href="/pages/quote.html">
                 <button class="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white py-3 rounded-full">Request Service</button>
+              </a>
             </div>
         </div>
 
         <!-- Vehicle Service -->
         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <img src="/api/placeholder/400/300" alt="Vehicle Service" class="w-full h-48 object-cover">
+            <img src="/assets/images/our-services/vehicle service.png" alt="Vehicle Service" class="w-full h-48 object-cover">
             <div class="p-6">
                 <h3 class="text-2xl font-bold text-blue-800 mb-4">Vehicle Service</h3>
                 <p class="text-gray-700 mb-6">Comprehensive vehicle maintenance and repair services:</p>
@@ -194,13 +229,15 @@
                     <li>• Brake system service</li>
                     <li>• Electrical system repairs</li>
                 </ul>
+                <a href="/pages/quote.html">
                 <button class="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white py-3 rounded-full">Request Service</button>
+              </a>
             </div>
         </div>
 
         <!-- Windscreen Repairs -->
         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <img src="/api/placeholder/400/300" alt="Windscreen Repairs" class="w-full h-48 object-cover">
+            <img src="/assets/images/our-services/windscreen repairs.png" alt="Windscreen Repairs" class="w-full h-48 object-cover">
             <div class="p-6">
                 <h3 class="text-2xl font-bold text-blue-800 mb-4">Windscreen Repairs</h3>
                 <p class="text-gray-700 mb-6">Professional windscreen repair and replacement services:</p>
@@ -210,19 +247,23 @@
                     <li>• Side window repairs</li>
                     <li>• Tinting services</li>
                 </ul>
+                <a href="/pages/quote.html">
                 <button class="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white py-3 rounded-full">Request Service</button>
+              </a>
             </div>
         </div>
     </div>
 </main>
 
-<section class="bg-gradient-to-r from-blue-800 to-blue-600 py-16">
+<section class="bg-gradient-to-r from-red-500 to-red-700 py-16">
     <div class="container mx-auto px-6 text-center text-white">
         <h2 class="text-4xl font-bold mb-6">Ready to Transform Your Vehicle?</h2>
         <p class="text-xl mb-8">Contact us today for a free consultation and detailed quote</p>
+        <a href="/pages/contact.html">
         <button class="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-12 py-4 rounded-full text-xl font-medium transition-all duration-300">
             Get Started Now
         </button>
+      </a>
     </div>
 </section>
 
