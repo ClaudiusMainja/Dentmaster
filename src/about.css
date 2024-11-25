@@ -1,0 +1,12 @@
+.font-dm-serif { font-family: 'DM Serif Display', serif; }
+.font-montserrat { font-family: 'Montserrat', sans-serif; }
+
+/* Custom gradient backgrounds */
+.bg-brand-gradient {
+    background: linear-gradient(135deg, #0a022e 0%, #0d449e 100%);
+}
+
+/* Dark mode styles */
+.dark .text-dark-primary { color: #ffffff; }
+.dark .bg-dark-primary { background-color: #1a1a1a; }
+.dark .bg-dark-secondary { background-color: #2d2d2d; }
