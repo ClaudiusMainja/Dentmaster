@@ -12,14 +12,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
 <link rel="stylesheet" href="/main.css">
+<link rel="stylesheet" href="/src/services.css">
+
 </head>
 
-    <!-- Custom Cursor -->
-    <div class="cursor-dot hidden md:block"></div>
-    <div class="cursor-outline hidden md:block"></div>
 
-    <!-- Progress Bar -->
-    <div class="progress-bar"></div>
 
 <header>
         <nav class="bg-gradient-to-tr from-gray-800 to-blue-800 shadow-lg fixed w-full top-0 z-50 py-6 montserrat">
@@ -86,13 +83,186 @@
     
         <!-- Spacer for fixed navbar -->
         <div class="h-16"></div>
+            <!-- Custom Cursor -->
+    <div class="cursor-dot hidden md:block"></div>
+    <div class="cursor-outline hidden md:block"></div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar"></div>
 </header>
 
-<body class=" bg-white dark:bg-indigo-800 montserrat text-2xl dark:text-white text-indigo-600">
+<body class="bg-white dark:bg-indigo-700 montserrat text-2xl dark:text-white text-indigo-500 transition-colors duration-300">
 
+    
+        <!-- Hero Section -->
+        <section class="bg-brand-gradient relative min-h-screen overflow-hidden">
+            <!-- Background with gradient overlay -->
+   <div class="absolute inset-0 z-0">
+       <img src="/assets/images/aboutbg.jpg" alt="Auto repair shop" class="object-cover w-full h-full"/>
+       <div class="absolute inset-0 bg-gradient-to-r from-red-900/80 via-blue-900/70 to-white/30 dark:from-red-950/90 dark:via-blue-950/80 dark:to-gray-900/40 "></div>
+   </div>
 
+   <div class="relative z-20 container mx-auto px-4 py-20 min-h-screen flex items-center text-center ">
+       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+           <!-- Text content -->
+           <div class="text-white dark:text-gray-100">
+               <h1 class="text-6xl md:text-6xl md:text-left lg:text-7xl  dm-serif-text-regular mb-6 slide-in">
+                   About Us
+               </h1>
+               <p class="text-lg md:text-2xl mb-8 text-gray-100 dark:text-gray-200 montserrat text-left">
+                   Your trusted partner in auto body repairs and services in Harare. We bring life back to both accident-damaged and non-runner vehicles, old and new.
+               </p>
+               <a href="/pages/quote.html" target="_blank">
+               <div class="flex flex-wrap gap-4">
+                   <button class="bg-red-600 hover:bg-red-700 dark:bg-red-700 dark:hover:bg-slate-200 dark:hover:text-gray-600 text-white px-12 py-6 rounded-lg transition duration-300 shadow-lg">
+                       Get a Quote
+                   </button>
+               </a>
+
+                  <a href="/pages/services.html"> <button class="bg-blue-600 dark:bg-transparent dark:border-2 border-slate-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800 text-white px-12 py-6 rounded-lg transition duration-300 shadow-lg">
+                     Our Services
+                   </button>
+               </a>
+               </div>
+           </div>
+
+           <!-- Image/illustration -->
+           <div class="hidden lg:block">
+               <img src="/assets/images/about us.png" alt="Who We Are" class="rounded-lg shadow-2xl container"/>
+           </div>
+       </div>
+   </div>
+
+</section>
+<body class="font-montserrat bg-white text-gray-900 dark:bg-gray-900 dark:text-white min-h-screen flex flex-col">
+    <div class="container mx-auto px-4 py-8 flex-grow">
+        <header class="text-center mb-8 md:mb-12">
+            <h1 class="text-3xl md:text-4xl font-dm-serif text-dent-blue dark:text-dent-white mb-4">Contact Dent Masters</h1>
+            <p class="text-base md:text-xl text-gray-600 dark:text-gray-300">Get in touch with our auto body repair experts</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Contact Form -->
+            <div class="bg-gray-100 dark:bg-gray-800 p-6 md:p-8 rounded-lg shadow-md">
+                <form action="https://submit.formspark.io/f/YOUR_FORM_ID" method="POST" class="space-y-4 md:space-y-6">
+                    <div>
+                        <label for="name" class="block mb-2 text-sm md:text-base dark:text-gray-200">Full Name</label>
+                        <input type="text" id="name" name="name" required 
+                            class="w-full p-2 md:p-3 text-sm md:text-base border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                    </div>
+                    <div>
+                        <label for="email" class="block mb-2 text-sm md:text-base dark:text-gray-200">Email Address</label>
+                        <input type="email" id="email" name="email" required 
+                            class="w-full p-2 md:p-3 text-sm md:text-base border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                    </div>
+                    <div>
+                        <label for="phone" class="block mb-2 text-sm md:text-base dark:text-gray-200">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" 
+                            class="w-full p-2 md:p-3 text-sm md:text-base border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                    </div>
+                    <div>
+                        <label for="service" class="block mb-2 text-sm md:text-base dark:text-gray-200">Service Interested In</label>
+                        <select id="service" name="service" 
+                            class="w-full p-2 md:p-3 text-sm md:text-base border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                            <option value="">Select a Service</option>
+                            <option value="panel-beating">Panel Beating</option>
+                            <option value="spray-painting">Spray Painting</option>
+                            <option value="chassis-straightening">Chassis Straightening</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message" class="block mb-2 text-sm md:text-base dark:text-gray-200">Your Message</label>
+                        <textarea id="message" name="message" rows="4" 
+                            class="w-full p-2 md:p-3 text-sm md:text-base border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white"></textarea>
+                    </div>
+                    <button type="submit" 
+                        class="w-full py-2 md:py-3 text-sm md:text-base bg-gradient-to-r from-dent-blue to-dent-red text-white rounded hover:opacity-90 transition-opacity">
+                        Submit Request
+                    </button>
+                </form>
+            </div>
+
+            <!-- Contact Information & Map -->
+            <div class="space-y-8">
+                <div class="bg-gray-100 dark:bg-gray-800 p-6 md:p-8 rounded-lg shadow-md">
+                    <h2 class="text-xl md:text-2xl font-dm-serif text-dent-blue dark:text-dent-white mb-4">Contact Details</h2>
+                    <div class="space-y-3 text-sm md:text-base">
+                        <p><strong>Address:</strong> 385 Willowvale Road, Southerton, Harare, Zimbabwe</p>
+                        <p><strong>Phone:</strong> 0773 372 973</p>
+                        <p><strong>Email:</strong> info@dentmasters.co.zw</p>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed -->
+                <div class="rounded-lg overflow-hidden shadow-md">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3797.1571109053325!2d31.0000145!3d-17.8781057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931a3f749b2fa25%3A0xa48d810644cc10d9!2s385%20Willowvale%20Rd%2C%20Harare%2C%20Zimbabwe!5e0!3m2!1sen!2sza!4v1732719767493!5m2!1sen!2sza" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" 
+        class="fixed bottom-4 right-4 bg-gray-200 dark:bg-gray-700 p-2 rounded-full shadow-lg z-50">
+        🌓
+    </button>
+
+    <script>
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const html = document.documentElement;
+
+        darkModeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('dark-mode', html.classList.contains('dark'));
+        });
+
+        if (localStorage.getItem('dark-mode') === 'true') {
+            html.classList.add('dark');
+        }
+    </script>
 </body>
 
+    <script>
+
+        // Form Submission
+        const form = document.getElementById('quoteForm');
+        const formStatus = document.getElementById('formStatus');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            formStatus.classList.remove('hidden');
+            formStatus.classList.remove('text-green-600', 'text-red-600');
+            formStatus.textContent = 'Sending...';
+
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json"
+                    },
+                    body: json
+                });
+
+                if (response.ok) {
+                    formStatus.classList.add('text-green-600');
+                    formStatus.textContent = 'Thank you! We will contact you soon.';
+                    form.reset();
+                } else {
+                    throw new Error('Submission failed');
+                }
+            } catch (error) {
+                formStatus.classList.add('text-red-600');
+                formStatus.textContent = 'Oops! There was a problem submitting your form';
+            }
+        });
+    </script>
+</body>
     <!-- Footer -->
     <footer class="bg-gradient-to-b from-white via-blue-50 to-red-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-all duration-500 ease-in-out">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
